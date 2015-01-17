@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Local Project To Mobile</title>
+        <script src="jquery-1.11.2.min.js" type="text/javascript"></script>
+        <script src="main.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="pure-min.css">
+    </head>
+    <body>        
+        <form class="pure-form pure-form-stacked">
+            <div class="pure-g" style="padding-top:30px;">
+                <div class="pure-u-2-24"></div>
+                <div class="pure-u-8-24">HTML Project Location</div>
+                <div class="pure-u-14-24"><input id="htmlprdir" type="file" nwdirectory /></div>
+                
+                <div class="pure-u-2-24"></div>
+                <div class="pure-u-8-24">Cordova Project Location</div>
+                <div class="pure-u-14-24"><input id="cordovaprdir" type="file" nwdirectory/></div>
+            </div>
+            
+            <div class="pure-g" style="padding-top:40px;">
+                <div class="pure-u-2-24"></div>
+                <div class="pure-u-8-24">Platform:</div>
+                <div class="pure-u-14-24">
+                    <select id="platform" class="pure-input-1-2">
+                        <option value="android">Android</option>
+                        <option value="ios">IOS</option>
+                    </select> 
+                </div>
+                
+                
+                <div class="pure-u-2-24"></div>
+                <div class="pure-u-8-24">Type:</div>
+                <div class="pure-u-14-24">
+                    <select id="operation">
+                        <option value="run">Run On Device</option>
+                        <option value="emulate">Run On Simulator</option>
+                        <option value="build">Just Build</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="pure-g" style="padding-top:15px;">
+                <div class="pure-u-8-24"></div>
+                <div class="pure-u-8-24">
+                    <button id="btn" type="button" class="pure-button" value="Do it!"> Run It! </button>
+                </div>
+            </div>
+        </form>
+        
+        
+    </body>
+
+</html>
