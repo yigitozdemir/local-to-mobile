@@ -4,6 +4,7 @@ var htmlProjectDirectory = "";
 //not www folder, just root project dir
 var cordovaProjectDirectory = "";
 
+var environment = "";
 var platform = "";
 var operationType = "";
 
@@ -13,6 +14,7 @@ $(function(){
     //if user doesnt change platform or operation this would be set
     platform = $("#platform").val();
     operationType = $("#operation").val();
+    environment = $("#environment").val();
     
     //when html project directory selected
     $("#htmlprdir").change( function(evt) {
@@ -24,6 +26,11 @@ $(function(){
     //this function triggered after cordova project selected
     $("#cordovaprdir").change( function(evt) {
         cordovaProjectDirectory = $(this).val();
+    });
+    
+    //triggered after environment change
+    $("#environment").change( function(evt) {
+        environment = $(this).val();
     });
     
     //triggered after platform change
@@ -39,7 +46,7 @@ $(function(){
         copyFiles();
         
         var cdQuery = "cd " + cordovaProjectDirectory;
-        var operationQuery = cdQuery + " && cordova " + operationType + " " + platform;
+        var operationQuery = cdQuery + " && " + environment +" " + operationType + " " + platform;
         
         //console.log(cdQuery);
         console.log(operationQuery);
